@@ -1,0 +1,71 @@
+﻿@model OutlookCalendar.Domain.Entities.Appointment
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<style>
+    .row {
+        padding: 3px;
+    }
+</style>
+
+<h2>Create New Appointment</h2>
+
+@using (Html.BeginForm("Create", "Create"))
+{
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1 text-right">Title: </div>
+            <div class="col-md-3">
+                <input type="text" name="title" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 text-right">Body: </div>
+            <div class="col-md-3">
+                <textarea name="body" cols="50" rows="6"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 text-right">Location: </div>
+            <div class="col-md-3">
+                <input type="text" name="location" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 text-right">Attendee: </div>
+            <div class="col-md-3">
+                <input type="text" name="attendee" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 text-right">Attendee Email: </div>
+            <div class="col-md-3">
+                <input type="email" name="attendeeEmail" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 text-right">Entity Id: </div>
+            <div class="col-md-3">
+                <input type="text" name="entityId" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 text-right">Start: </div>
+            <div class="col-md-3">
+                <input name="start" type="datetime-local" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 text-right">End: </div>
+            <div class="col-md-3">
+                <input name="end" type="datetime-local" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 text-right"><input type="submit" value="Save" class="btn btn-primary" /></div>
+            <div class="col-md-1">@Html.ActionLink("Cancel", "Back", null, new { @class = "btn btn-default" })</div>
+        </div>
+    </div>
+}

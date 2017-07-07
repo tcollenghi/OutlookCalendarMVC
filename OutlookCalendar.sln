@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutlookCalendar.Domain", "OutlookCalendar.Domain\OutlookCalendar.Domain.csproj", "{EE8E5F20-0F7A-4446-866E-09C1D91AC071}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutlookCalendar.WebUI", "OutlookCalendar.WebUI\OutlookCalendar.WebUI.csproj", "{E649D648-C024-4A71-9B5C-887F1D6D2448}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE8E5F20-0F7A-4446-866E-09C1D91AC071}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE8E5F20-0F7A-4446-866E-09C1D91AC071}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE8E5F20-0F7A-4446-866E-09C1D91AC071}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE8E5F20-0F7A-4446-866E-09C1D91AC071}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E649D648-C024-4A71-9B5C-887F1D6D2448}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E649D648-C024-4A71-9B5C-887F1D6D2448}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E649D648-C024-4A71-9B5C-887F1D6D2448}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E649D648-C024-4A71-9B5C-887F1D6D2448}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

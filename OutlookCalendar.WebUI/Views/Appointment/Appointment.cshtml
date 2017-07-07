@@ -1,0 +1,92 @@
+﻿@using OutlookCalendar.Domain.Entities;
+@model IEnumerable<Appointment>
+
+@{
+    ViewBag.Title = "Appointments";
+}
+
+<style>
+    .row {
+        padding: 3px;
+    }
+    
+    .empty {
+        clear: both;
+    }
+</style>
+
+<h2>Appointments</h2>
+<div class="container col-md-4">
+    @using (Html.BeginForm("CheckEvents", "Appointment"))
+    {
+
+        <div class="row">
+            <div class="col-md-2" style="text-align: right">Start:</div>
+            <div class="col-md-3">
+                <input type="datetime-local" name="start" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2" style="text-align: right">End: </div>
+            <div class="col-md-3">
+                <input type="datetime-local" name="end" />
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-1"><button class="btn btn-default">Search by Date</button></div>      
+        </div>
+
+    }
+</div>
+<div class="container col-md-8">
+    @using (Html.BeginForm("CheckEntity", "Appointment"))
+    {
+        <div class="row"></div>
+        <div class="row" style="padding-top: 29px">
+            <div class="col-md-2" style="text-align: right">Entity Id: </div>
+            <div class="col-md-3">
+                <input type="text" name="entityId" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1">
+                <div class="col-md-1"><button class="btn btn-default">Search by Id</button>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+<br/>
+<div class="empty"></div>
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            @if (Model.Count() != 0)
+            {
+                <table class="table table-striped table-condensed table-bordered">
+                    <tr>
+                        <th class="text-center">Title</th>
+                        <th class="text-center">Start</th>
+                        <th class="text-center">End</th>
+                        <th class="text-center">Delete</th>
+                    </tr>
+                    @foreach (var appointment in Model)
+                    {
+                        <tr>
+                            <td>@Html.ActionLink(appointment.Title, "Edit", appointment)</td>
+                            <td>@appointment.Start</td>
+                            <td>@appointment.End</td>
+                            <td class="text-center">
+                                @Html.ActionLink("Delete", "Delete", appointment, new {@class="btn btn-default btn-xs"})
+                            </td>
+                        </tr>
+                    }
+                </table>
+            }
+        </div>
+        <div class="panel-footer">
+            @Html.ActionLink("New Appointment", "Create", null, new { @class = "btn btn-default"})
+        </div>
+    </div>
+</div>
