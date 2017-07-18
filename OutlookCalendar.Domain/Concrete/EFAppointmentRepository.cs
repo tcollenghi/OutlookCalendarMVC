@@ -1,7 +1,6 @@
 ﻿using OutlookCalendar.Domain.Abstract;
 using OutlookCalendar.Domain.Entities;
 using System.Collections.Generic;
-using System.Net.Http.Headers;
 using Z.EntityFramework.Plus;
 
 namespace OutlookCalendar.Domain.Concrete

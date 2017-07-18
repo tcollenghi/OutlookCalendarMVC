@@ -243,7 +243,7 @@ namespace OutlookCalendar.WebUI.Helpers
 
         private Event CreateEvent(Appointment appointment)
         {
-            var outlookEvent = new Event
+            return new Event
             {
                 Subject = appointment.Title,
                 Body = new Microsoft.Graph.ItemBody
@@ -266,8 +266,6 @@ namespace OutlookCalendar.WebUI.Helpers
                     TimeZone = "Pacific Standard Time"
                 }
             };
-
-            return outlookEvent;
         }
     }
 }
